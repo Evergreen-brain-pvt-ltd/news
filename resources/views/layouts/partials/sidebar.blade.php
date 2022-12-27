@@ -127,13 +127,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('users.create')}}" class="nav-link">
                   <i class="fa fa-user-plus nav-icon"></i>
                   <p>Add New User</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('admin.users.view')}}" class="nav-link">
                   <i class="fa fa-users nav-icon"></i>
                   <p>Users</p>
                 </a>
@@ -151,13 +151,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('roles.create')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add New Role</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('admin.roles.view')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Roles</p>
                 </a>

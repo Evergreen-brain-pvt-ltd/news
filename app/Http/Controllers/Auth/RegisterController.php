@@ -49,11 +49,28 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        // dd($data);
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'firstname' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'company_name'                => 'required',
+            'job_title'                   => 'required',
+            'industry_sector'             => 'required',
+            'job_function'                => 'required',
+            'job_level'                   => 'required',
+            'phone_number'                => 'required',
+            'country'                     => 'required',
+            'city'                        => 'required',
+            'state'                       => 'required',
+            'zip_code'                    => 'required',
+    
+        ],
+        [
+            "required" => "Field is required."
+        ]
+        );
     }
 
     /**
@@ -65,9 +82,22 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'name'   =>$data['firstname'].' '.$data['lastname'],
+            'firstname' => $data['firstname'],
+            'lastname' => $data['lastname'],
+            'company_name'=>$data['company_name'],
+            'job_title' =>$data['job_title'],
+            'industry_sector'=>$data['industry_sector'],
+            'job_function'=>$data['job_function'],
+            'job_level'=>$data['job_level'],
+            'phone_number'=>$data['phone_number'],
+            'country' =>$data['country'],
             'email' => $data['email'],
+            'city' =>$data['city'],
+            'state'=>$data['state'],
+            'zip_code'=>$data['zip_code'],
             'password' => Hash::make($data['password']),
+            'terms'=> !empty($data['terms']) ? $data['terms'] : 'false' 
         ]);
     }
 }

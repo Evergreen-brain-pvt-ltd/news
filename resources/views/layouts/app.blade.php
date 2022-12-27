@@ -44,6 +44,9 @@
   .toast {
     background-color: rgba(255, 255, 255, 0.85);
     }
+    .select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: 21px !important;
+  }
 </style>
   @stack("header_extras")
 </head>
