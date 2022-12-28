@@ -59,9 +59,7 @@ class UserController extends Controller
     
         $user = User::create($input);
         $user->assignRole($request->input('roles'));
-        DB::table('users')->where('id',$user->id)->update(['approved'=>"Approved"]);
-        return redirect()->route('admin.users.view')
-                        ->with('msg','User created successfully');
+        return redirect()->route('admin.users.view')->with('msg','User created successfully');
     }
     
     /**

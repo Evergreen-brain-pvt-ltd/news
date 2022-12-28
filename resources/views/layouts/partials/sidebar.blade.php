@@ -55,13 +55,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('admin.news.create')}}" class="nav-link">
                   <i class="fa fa-edit nav-icon"></i>
                   <p>Add New News</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('admin.news.list')}}" class="nav-link">
                   <i class="fa fa-file-invoice nav-icon"></i>
                   <p>All News</p>
                 </a>
@@ -175,13 +175,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('admin.category.create')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Category</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('admin.category.list')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>All Categories</p>
                 </a>
